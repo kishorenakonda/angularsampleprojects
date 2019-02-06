@@ -1,0 +1,24 @@
+<div class="col-sm-6 offset-sm-3">
+  <p>
+    {{username}}
+    <span *ngIf="showage && !showdata">
+      please enter your age
+    </span>
+
+    <span *ngIf="!showage && !showdata">
+      Sorry You can't vote
+    </span>
+
+    <span *ngIf="voteAccepted && showdata">
+      Your Vote Accepted
+    </span>
+  </p>
+
+  <div>
+    <input type="number" class="form-control" [(ngModel)]="age" name="age"/>
+  </div>
+
+  <div class="margin-t-10">
+    <button class="btn btn-primary btn-block" (click)="checkVote(age)"> Submit </button>
+  </div>
+</div>
