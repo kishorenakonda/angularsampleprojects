@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
 
   onSubmit(username){
     console.log(username);
-    this.router.navigate(['/userdetail'],username)
+    this.router.navigate(['/userdetail/'+ username])
   }
 
 }

@@ -15,12 +15,12 @@
     </div>
 
     <div>
-      <label> Time in (Months) </label>
+      <label> Time (in Months) </label>
       <input type="number" class="form-control" [(ngModel)]="months" name="months" />
     </div>
 
     <div class="margin-t-10">
-      <button class="btn btn-primary btn-block" (click)="calculate(cform)"> Calculate SI </button>
+      <button class="btn btn-primary btn-block" (click)="calculate()"> Calculate SI </button>
     </div>
   </form>
 
@@ -28,5 +28,9 @@
     <label> Simple Intrest </label>
     <input type="text" class="form-control" [(ngModel)]="amount" name="amount" />
   </div>
+
+  <label class="margin-t-10">
+    Amount:  {{ totalamount }}
+  </label>
 
 </div>

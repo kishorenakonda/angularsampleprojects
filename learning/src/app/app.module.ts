@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { FormsModule } from '@angular/forms';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { CalculatorService } from './calculator/calculator.service';
 
 const myRoutes: Route[] = [
   {
@@ -19,7 +20,7 @@ const myRoutes: Route[] = [
     component: HomeComponent
   },
   {
-    path: 'userdetail',
+    path: 'userdetail/:name',
     component: UserDetailComponent
   },
   {
@@ -39,7 +40,7 @@ const myRoutes: Route[] = [
     RouterModule.forRoot(myRoutes),
     FormsModule
   ],
-  providers: [],
+  providers: [CalculatorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

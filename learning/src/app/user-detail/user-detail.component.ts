@@ -8,13 +8,15 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class UserDetailComponent implements OnInit {
 
-  // @Input() username: String;
+  username: String;
   showage: Boolean = true;
   voteAccepted: Boolean = false;
   showdata: Boolean;
   age: Number;
 
   constructor(private router: ActivatedRoute) {
+    this.username =  this.router.snapshot.params["name"]; 
+    console.log(this.username);
   }
 
   ngOnInit() {
