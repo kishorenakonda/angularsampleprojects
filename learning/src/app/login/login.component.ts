@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
+  loginForm = {
+    hobbies : []
+  };
   constructor() { }
 
   ngOnInit() {
   }
 
+  submitForm(){
+    console.log(this.loginForm);
+  }
 }

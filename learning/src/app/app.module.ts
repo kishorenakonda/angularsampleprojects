@@ -4,6 +4,7 @@ import { RouterModule, Route} from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
+import { FormsModule} from '@angular/forms';
 
 const myRoutes: Route[] = [
   {
@@ -19,11 +20,12 @@ const myRoutes: Route[] = [
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(myRoutes)
+    RouterModule.forRoot(myRoutes),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
